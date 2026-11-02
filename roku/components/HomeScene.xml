@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<component name="HomeScene" extends="Scene">
+  <script type="text/brightscript" uri="pkg:/components/HomeScene.brs" />
+  <children>
+    <Rectangle width="1280" height="720" color="0x080B14FF" />
+    <Label id="brand" text="TV DEXTERH4CK" translation="[72,42]" width="900" height="65" font="font:LargeBoldSystemFont" color="0xE9F7FFFF" />
+    <Label id="status" text="Conectando con tu catálogo..." translation="[74,120]" width="1000" height="42" color="0x55D6E8FF" />
+    <Label id="rows" text="" translation="[74,190]" width="1120" height="470" color="0xFFFFFFFF" />
+  </children>
+</component>
