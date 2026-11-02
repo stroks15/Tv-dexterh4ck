@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "runtime": "dexter-media-adapter-v1",
+  "plugins": [
+    {"id":"xuper","name":"Xuper TV Latino Premium","kind":"direct_hls_dash","category":"xuper","enabled":false,"platforms":["web","roku"],"requires_authorized_stream":true,"description":"Adaptador de reproducción para fuentes HLS/DASH que el usuario tenga derecho a utilizar."},
+    {"id":"iptv-org-mx-latam","name":"IPTV Org MX & Latam","kind":"direct_hls_dash","category":"plugins","enabled":false,"platforms":["web","roku"],"requires_authorized_stream":true,"description":"Importación de listas públicas sólo cuando la licencia y los derechos del canal permitan su uso."},
+    {"id":"pluto-vix-free","name":"Pluto TV & ViX Free","kind":"official_or_authorized_feed","category":"plugins","enabled":false,"platforms":["web","roku"],"requires_authorized_stream":true,"description":"Conector pendiente de una API o feed oficial autorizado."},
+    {"id":"doramaslatino-api","name":"DoramasLatino API Plugin","kind":"api_or_direct_hls_dash","category":"plugins","enabled":false,"platforms":["web","roku"],"requires_authorized_stream":true,"description":"Conector API pendiente de documentación y autorización del proveedor."},
+    {"id":"cine-oro-mexicano","name":"Cine de Oro Mexicano","kind":"public_domain_or_licensed_vod","category":"plugins","enabled":false,"platforms":["web","roku"],"requires_authorized_stream":true,"description":"Catálogo VOD de dominio público o con licencia verificada."},
+    {"id":"retroseries-latam","name":"RetroSeries Latam","kind":"licensed_vod","category":"plugins","enabled":false,"platforms":["web","roku"],"requires_authorized_stream":true,"description":"Proveedor VOD pendiente de credenciales y autorización."},
+    {"id":"vod-latino-releases","name":"VOD Latino Releases & Realitys","kind":"licensed_vod","category":"plugins","enabled":false,"platforms":["web","roku"],"requires_authorized_stream":true,"description":"Proveedor VOD pendiente de credenciales y autorización."},
+    {"id":"navidad-total","name":"Navidad Total","kind":"licensed_vod","category":"plugins","enabled":false,"platforms":["web","roku"],"requires_authorized_stream":true,"description":"Colección estacional pendiente de fuentes autorizadas."}
+  ]
+}
