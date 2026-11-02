@@ -3,10 +3,13 @@
  <script type="text/brightscript" uri="pkg:/components/HomeScene.brs" />
  <children>
   <Rectangle width="1280" height="720" color="0x080B14FF" />
-  <Label text="TV DEXTERH4CK" translation="[70,35]" width="1000" height="65" font="font:LargeBoldSystemFont" color="0xE9F7FFFF" />
-  <Label id="status" text="Conectando con tu catálogo..." translation="[74,112]" width="1100" height="40" color="0x55D6E8FF" />
-  <LabelList id="catalog" translation="[70,170]" itemSize="[1100,54]" numRows="8" itemTextColor="0xDCE5F5FF" itemSelectedTextColor="0x55D6E8FF" focusBitmapUri="" />
+  <Label text="TV DEXTERH4CK" translation="[70,28]" width="1000" height="60" font="font:LargeBoldSystemFont" color="0xE9F7FFFF" />
+  <Label id="status" text="Conectando con tu catálogo..." translation="[74,92]" width="1100" height="34" color="0x55D6E8FF" />
+  <Label text="PLUGINS Y PROVEEDORES" translation="[74,132]" width="1000" height="30" font="font:MediumBoldSystemFont" color="0xA997FFFF" />
+  <LabelList id="plugins" translation="[70,166]" itemSize="[1100,30]" numRows="3" itemTextColor="0xDCE5F5FF" itemSelectedTextColor="0x55D6E8FF" />
+  <Label text="CATÁLOGO" translation="[74,324]" width="1000" height="30" font="font:MediumBoldSystemFont" color="0xA997FFFF" />
+  <LabelList id="catalog" translation="[70,360]" itemSize="[1100,42]" numRows="5" itemTextColor="0xDCE5F5FF" itemSelectedTextColor="0x55D6E8FF" />
   <Video id="player" width="1" height="1" visible="false" />
-  <Label id="playing" text="" translation="[74,645]" width="1100" height="40" color="0x55D6E8FF" />
+  <Label id="playing" text="" translation="[74,650]" width="1100" height="35" color="0x55D6E8FF" />
  </children>
 </component>
