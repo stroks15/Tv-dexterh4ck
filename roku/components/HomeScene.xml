@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <component name="HomeScene" extends="Scene">
-  <script type="text/brightscript" uri="pkg:/components/HomeScene.brs" />
-  <children>
-    <Rectangle width="1280" height="720" color="0x080B14FF" />
-    <Label id="brand" text="TV DEXTERH4CK" translation="[72,42]" width="900" height="65" font="font:LargeBoldSystemFont" color="0xE9F7FFFF" />
-    <Label id="status" text="Conectando con tu catálogo..." translation="[74,120]" width="1000" height="42" color="0x55D6E8FF" />
-    <Label id="rows" text="" translation="[74,190]" width="1120" height="470" color="0xFFFFFFFF" />
-  </children>
+ <script type="text/brightscript" uri="pkg:/components/HomeScene.brs" />
+ <children>
+  <Rectangle width="1280" height="720" color="0x080B14FF" />
+  <Label text="TV DEXTERH4CK" translation="[70,35]" width="1000" height="65" font="font:LargeBoldSystemFont" color="0xE9F7FFFF" />
+  <Label id="status" text="Conectando con tu catálogo..." translation="[74,112]" width="1100" height="40" color="0x55D6E8FF" />
+  <LabelList id="catalog" translation="[70,170]" itemSize="[1100,54]" numRows="8" itemTextColor="0xDCE5F5FF" itemSelectedTextColor="0x55D6E8FF" focusBitmapUri="" />
+  <Video id="player" width="1" height="1" visible="false" />
+  <Label id="playing" text="" translation="[74,645]" width="1100" height="40" color="0x55D6E8FF" />
+ </children>
 </component>
