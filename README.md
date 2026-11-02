@@ -18,8 +18,11 @@ Activar Email OTP en Supabase Auth y añadir la URL de producción de Vercel en 
 ## Publicar contenido
 Crear filas en `tv_dexter.catalog_items` con `published=true`, categoría existente y una URL propia o autorizada en `stream_url`. El reproductor web soporta MP4 y HLS cuando el navegador lo admite de forma nativa. No se incluyen listas IPTV, canales de pago ni enlaces de terceros sin autorización.
 
+## Plugins multiplataforma (Kino / Xuper)
+El contrato de plugins del launcher Kino se ha portado a `public/plugins.json`. Web y Roku comparten los mismos IDs y fuentes (`source_name`); cada plataforma usa su reproductor nativo: hls.js + dash.js + HTML5 Video en web y el nodo `Video` de Roku. Los plugins empiezan deshabilitados hasta configurar un feed o stream autorizado. Consulta `PLUGIN_RUNTIME.md` para el contrato y los pasos de activación.
+
 ## Roku
-El cliente Roku inicial consume el endpoint público de catálogo. Empaquetar `roku/` en ZIP e instalar mediante Developer Installer en un Roku con modo desarrollador. Para distribución pública se requiere cuenta Roku Developer y revisión del canal.
+El cliente Roku consume `/plugins.json` y `/api/catalog`, presenta los proveedores y reproduce HLS/DASH/MP4 mediante SceneGraph/BrightScript y el nodo `Video`. Empaquetar `roku/` en ZIP e instalar mediante Developer Installer en un Roku con modo desarrollador. Para distribución pública se requiere cuenta Roku Developer y revisión del canal.
 
 ## Desarrollo
 `npm ci && npm run dev` · `npm run lint` · `npm run build`.
