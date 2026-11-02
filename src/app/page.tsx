@@ -1,13 +1,16 @@
 "use client";
-import {useEffect,useMemo,useRef,useState} from "react";\nimport Hls from "hls.js";
+import {useEffect,useMemo,useRef,useState} from "react";
+import Hls from "hls.js";
 import {Search,Play,Heart,Radio,Film,MonitorPlay,LogIn,LogOut,Mic,ChevronRight, Tv2} from "lucide-react";
 import {supabaseBrowser} from "@/lib/supabase-browser";
 type Item={id:string;category_id:string;title:string;synopsis:string;poster_url:string|null;backdrop_url:string|null;stream_url:string|null;stream_type:string;source_name:string|null;release_year:number|null;duration_seconds:number|null;is_live:boolean;featured:boolean};
 type Category={id:string;name:string;description:string};
 export default function Home(){
- const videoRef=useRef<HTMLVideoElement|null>(null);\n const [items,setItems]=useState<Item[]>([]),[categories,setCategories]=useState<Category[]>([]),[category,setCategory]=useState("inicio"),[query,setQuery]=useState(""),[selected,setSelected]=useState<Item|null>(null),[email,setEmail]=useState(""),[user,setUser]=useState<string|null>(null),[token,setToken]=useState(""),[favorites,setFavorites]=useState<string[]>([]),[notice,setNotice]=useState(""),[busy,setBusy]=useState(false);
+ const videoRef=useRef<HTMLVideoElement|null>(null);
+ const [items,setItems]=useState<Item[]>([]),[categories,setCategories]=useState<Category[]>([]),[category,setCategory]=useState("inicio"),[query,setQuery]=useState(""),[selected,setSelected]=useState<Item|null>(null),[email,setEmail]=useState(""),[user,setUser]=useState<string|null>(null),[token,setToken]=useState(""),[favorites,setFavorites]=useState<string[]>([]),[notice,setNotice]=useState(""),[busy,setBusy]=useState(false);
  async function load(){const p=new URLSearchParams();if(category!=="inicio")p.set("category",category);if(query.trim())p.set("q",query.trim());const r=await fetch("/api/catalog?"+p);const d=await r.json();if(r.ok){setItems(d.items);setCategories(d.categories)}else setNotice(d.error||"No se pudo cargar el catálogo.");}
- useEffect(()=>{load()},[category,query]);\n useEffect(()=>{if(!selected?.stream_url||selected.stream_type!=="hls")return;const video=videoRef.current;if(!video)return;if(Hls.isSupported()){const hls=new Hls({enableWorker:true});hls.loadSource(selected.stream_url);hls.attachMedia(video);return()=>hls.destroy()}if(video.canPlayType("application/vnd.apple.mpegurl"))video.src=selected.stream_url},[selected]);
+ useEffect(()=>{load()},[category,query]);
+ useEffect(()=>{if(!selected?.stream_url||selected.stream_type!=="hls")return;const video=videoRef.current;if(!video)return;if(Hls.isSupported()){const hls=new Hls({enableWorker:true});hls.loadSource(selected.stream_url);hls.attachMedia(video);return()=>hls.destroy()}if(video.canPlayType("application/vnd.apple.mpegurl"))video.src=selected.stream_url},[selected]);
  useEffect(()=>{try{const c=supabaseBrowser();c.auth.getSession().then(({data})=>{const s=data.session;if(s){setUser(s.user.email??"Cuenta");setToken(s.access_token);refreshMe(s.access_token)}});const {data:{subscription}}=c.auth.onAuthStateChange((_e,s)=>{setUser(s?.user.email??null);setToken(s?.access_token??"");if(s)refreshMe(s.access_token);else setFavorites([])});return()=>subscription.unsubscribe()}catch(e){setNotice(e instanceof Error?e.message:"Configura Supabase.")}},[]);
  async function refreshMe(t:string){const r=await fetch("/api/me",{headers:{Authorization:"Bearer "+t}});if(r.ok){const d=await r.json();setFavorites(d.favorites.map((x:{item_id:string})=>x.item_id))}}
  async function login(){setBusy(true);setNotice("");try{const {error}=await supabaseBrowser().auth.signInWithOtp({email,options:{emailRedirectTo:location.origin}});if(error)throw error;setNotice("Te enviamos un enlace de acceso a tu correo.")}catch(e){setNotice(e instanceof Error?e.message:"No fue posible iniciar sesión.")}finally{setBusy(false)}}
