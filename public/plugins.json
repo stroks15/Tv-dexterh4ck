@@ -70,8 +70,8 @@
       ],
       "network_policy": "declared_hosts_only",
       "declared_capabilities": [
-        "user_supplied_account_credentials",
-        "user_configured_stream_server"
+        "user_configured_server",
+        "authorized_stream_playback"
       ]
     },
     {
@@ -136,7 +136,9 @@
       ],
       "network_policy": "declared_hosts_only",
       "declared_capabilities": [
-        "live_tv"
+        "catalog_browsing",
+        "live_tv",
+        "authorized_stream_playback"
       ]
     },
     {
@@ -161,9 +163,6 @@
         "api.cinehdplus.org",
         "fotise.com",
         "voe.sx",
-        "mixdrop.co",
-        "mixdrop.to",
-        "streamtape.com",
         "strcloud.link",
         "stape.fun",
         "streamadblocker.xyz",
@@ -177,9 +176,6 @@
         "wishembed.com",
         "filelions.com",
         "vidhide.com",
-        "vidhidepro.com",
-        "vidhideplus.com",
-        "vidhidefast.com",
         "callistanise.com",
         "dintezuvio.com",
         "minochinos.com",
@@ -219,9 +215,6 @@
         "embed69.org",
         "voe.sx",
         "vidhide.com",
-        "vidhidepro.com",
-        "vidhideplus.com",
-        "vidhidefast.com",
         "callistanise.com",
         "dintezuvio.com",
         "minochinos.com",
@@ -278,7 +271,9 @@
       ],
       "network_policy": "declared_hosts_only",
       "declared_capabilities": [
-        "live_tv"
+        "catalog_browsing",
+        "live_tv",
+        "authorized_stream_playback"
       ]
     },
     {
@@ -300,8 +295,6 @@
       "declared_network_domains": [
         "embed69.org",
         "vidhide.com",
-        "vidhidepro.com",
-        "vidhideplus.com",
         "dintezuvio.com",
         "minochinos.com",
         "filelions.to",
@@ -435,11 +428,6 @@
         "cdn.jkdesa.com",
         "cinecalidad.am",
         "hackstore.fo",
-        "cinehdplus.org",
-        "api.cinehdplus.org",
-        "sololatino.net",
-        "embed69.org",
-        "pelisgratishds",
         "cdn.pelistop.com",
         "embed.pelisgratishd.lat",
         "directyp.org",
@@ -447,8 +435,6 @@
         "vidplayz.site",
         "i1.wp.com",
         "entrepeliculasyseries.nz",
-        "animeav1",
-        "animeflv.net",
         "tdtchannels.com",
         "net79.cc",
         "onlyflix.to",
@@ -463,37 +449,23 @@
         "goodstream.one",
         "vimeos.net",
         "filemoon.sx",
-        "doodstream.com",
         "morencius.com",
         "hglink.to",
         "fotise.com",
-        "vidhide.com",
-        "vidhidepro.com",
-        "vidhideplus.com",
-        "vidhidefast.com",
         "unlimplay.com",
         "nontongo.stream",
-        "mixdrop.co",
-        "streamtape.com",
-        "sfastwish.com",
         "dsvplay.com",
         "d-s.io",
         "mega.nz",
-        "bysekoze.com",
-        "hakunaymatata.com",
         "kaembed.net",
         "waaw.to",
         "vidapi.xyz",
         "vidfast.vc",
         "uqload.vc",
         "playmogo.com",
-        "megankiddifference.com",
-        "chaliceguzzlerlandlord.com",
-        "derricknationtop.com",
         "opuxa.lat",
         "cuevana3to.com",
         "dramiyos-cdn.com",
-        "byselapuix.com",
         "player.zilla-networks.com",
         "flixcloud.cc",
         "mfw09.org",
@@ -502,7 +474,6 @@
         "cuevanatv.vip",
         "acek-cdn.com",
         "streamwish.to",
-        "animeav1.uns.bio",
         "callistanise.com",
         "yojatv-status.onrender.com"
       ],
@@ -513,8 +484,11 @@
       ],
       "network_policy": "declared_hosts_only",
       "declared_capabilities": [
-        "user_supplied_account_credentials",
-        "live_tv"
+        "catalog_browsing",
+        "search",
+        "live_tv",
+        "authorized_stream_playback",
+        "user_account_authentication"
       ]
     },
     {
@@ -752,13 +726,10 @@
       "description": "Plugin de Kino importado del kit YojanderKits; requiere revisar licencia, permisos y adaptar sus interfaces antes de habilitarlo.",
       "declared_network_domains": [
         "lamovie.org",
-        "hackstore2",
         "cinecalidad.vg",
-        "seriesmetro.com",
-        "seriesflix.com",
+        "seriesmetro",
+        "seriesflix",
         "embed69.org",
-        "homelabx",
-        "zoowomaniacos",
         "goodstream.one",
         "vimeos.net",
         "vimeos.zip",
@@ -770,21 +741,15 @@
         "hglink.to",
         "vibuxer.com",
         "vidhide.com",
-        "vidhidepro.com",
-        "vidhideplus.com",
-        "vidhidefast.com",
         "dintezuvio.com",
         "minochinos.com",
         "filelions.to",
         "morencius.com",
-        "fastream.to",
         "voe.sx",
         "ok.ru",
         "archive.org",
-        "nupload.com",
         "pelisplushd.la",
         "pelispanda.org",
-        "tioplus.com",
         "raw.githubusercontent.com"
       ],
       "network_disclosure_source": "user-provided Kino Android plugin permission disclosure",
@@ -794,7 +759,9 @@
       ],
       "network_policy": "declared_hosts_only",
       "declared_capabilities": [
-        "live_tv"
+        "catalog_browsing",
+        "live_tv",
+        "authorized_stream_playback"
       ]
     },
     {
@@ -835,18 +802,16 @@
       "source_license": "Apache-2.0",
       "adapter_status": "source_reviewed_adapter_pending",
       "description": "Plugin Xuper de Kino. Código público upstream bajo Apache-2.0; requiere adaptar catálogo, sesiones y resolución de reproducción a un servicio seguro para web/Roku.",
-      "declared_network_domains": [
-        "oogoy.f30c96w8.com",
-        "osuhk.m3x8050te.com",
-        "api.themoviedb.org",
-        "raw.githubusercontent.com"
-      ],
       "network_disclosure_source": "user-provided Kino Android plugin permission disclosure",
       "excluded_capabilities": [
         "offline_video_downloads",
         "diagnostic_telemetry"
       ],
-      "network_policy": "declared_hosts_only"
+      "network_policy": "declared_hosts_only",
+      "declared_capabilities": [
+        "catalog_browsing",
+        "authorized_stream_playback"
+      ]
     },
     {
       "id": "animeav1",
@@ -896,7 +861,8 @@
       ],
       "network_policy": "declared_hosts_only",
       "declared_capabilities": [
-        "user_configured_m3u_server"
+        "user_configured_m3u",
+        "live_tv"
       ]
     },
     {
@@ -918,10 +884,6 @@
       "declared_network_domains": [
         "lacartoons.com",
         "ok.ru",
-        "okcdn.ru",
-        "mycdn.me",
-        "dhtpre.com",
-        "tiktokcdn.com",
         "rpmvid.com"
       ],
       "network_disclosure_source": "user-provided Kino Android plugin permission disclosure",
@@ -985,7 +947,9 @@
       ],
       "network_policy": "declared_hosts_only",
       "declared_capabilities": [
-        "user_supplied_account_credentials"
+        "catalog_browsing",
+        "authorized_stream_playback",
+        "user_account_authentication"
       ]
     },
     {
