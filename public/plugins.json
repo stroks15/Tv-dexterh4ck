@@ -62,13 +62,13 @@
       "source_repository": "https://github.com/damiandaqsk-netizen/kino-mi-xtream",
       "source_version": "1.3.1",
       "source_license": "UNVERIFIED",
-      "adapter_status": "metadata_only",
-      "description": "Plugin de Kino importado del kit YojanderKits; requiere revisar licencia, permisos y adaptar sus interfaces antes de habilitarlo.",
+      "adapter_status": "built_in_user_configured_adapter",
+      "description": "Conector propio de DexterH4ck para servidores Xtream del usuario. Consulta canales y películas y reproduce streams del proveedor; no ejecuta código del plugin Kino.",
       "excluded_capabilities": [
         "offline_video_downloads",
         "diagnostic_telemetry"
       ],
-      "network_policy": "declared_hosts_only",
+      "network_policy": "user_configured_public_host",
       "declared_capabilities": [
         "user_configured_server",
         "authorized_stream_playback"
