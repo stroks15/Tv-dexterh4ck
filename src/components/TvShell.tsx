@@ -1,7 +1,7 @@
 "use client";
 import {useEffect,useMemo,useRef,useState,useCallback} from "react";
 import Hls from "hls.js";
-import dashjs from "dashjs";
+import * as dashjs from "dashjs";
 import SourceConnector from "./SourceConnector";
 import {Tv,Radio,Play,Search,Lock,Heart,X} from "lucide-react";
 import {supabaseBrowser} from "@/lib/supabase-browser";
