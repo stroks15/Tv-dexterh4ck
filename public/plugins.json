@@ -23,7 +23,30 @@
       "source_version": "0.1.0",
       "source_license": "UNVERIFIED",
       "adapter_status": "metadata_only",
-      "description": "Plugin de Kino importado del kit YojanderKits; requiere revisar licencia, permisos y adaptar sus interfaces antes de habilitarlo."
+      "description": "Plugin de Kino importado del kit YojanderKits; requiere revisar licencia, permisos y adaptar sus interfaces antes de habilitarlo.",
+      "declared_network_domains": [
+        "lamovie.org",
+        "vimeos.net",
+        "*.vimeos.net",
+        "vimeos.zip",
+        "*.vimeos.zip",
+        "videoapp.zip",
+        "*.videoapp.zip",
+        "image.tmdb.org",
+        "raw.githubusercontent.com",
+        "kitsu.io",
+        "media.kitsu.app"
+      ],
+      "network_disclosure_source": "user-provided Kino Android plugin permission disclosure",
+      "excluded_capabilities": [
+        "offline_video_downloads",
+        "diagnostic_telemetry"
+      ],
+      "network_policy": "declared_hosts_only",
+      "declared_capabilities": [
+        "catalog_browsing",
+        "authorized_stream_playback"
+      ]
     },
     {
       "id": "mi-xtream",
@@ -40,7 +63,16 @@
       "source_version": "1.3.1",
       "source_license": "UNVERIFIED",
       "adapter_status": "metadata_only",
-      "description": "Plugin de Kino importado del kit YojanderKits; requiere revisar licencia, permisos y adaptar sus interfaces antes de habilitarlo."
+      "description": "Plugin de Kino importado del kit YojanderKits; requiere revisar licencia, permisos y adaptar sus interfaces antes de habilitarlo.",
+      "excluded_capabilities": [
+        "offline_video_downloads",
+        "diagnostic_telemetry"
+      ],
+      "network_policy": "declared_hosts_only",
+      "declared_capabilities": [
+        "user_supplied_account_credentials",
+        "user_configured_stream_server"
+      ]
     },
     {
       "id": "la-cartoons-plus",
@@ -57,7 +89,24 @@
       "source_version": "0.1.3",
       "source_license": "UNVERIFIED",
       "adapter_status": "metadata_only",
-      "description": "Plugin de Kino importado del kit YojanderKits; requiere revisar licencia, permisos y adaptar sus interfaces antes de habilitarlo."
+      "description": "Plugin de Kino importado del kit YojanderKits; requiere revisar licencia, permisos y adaptar sus interfaces antes de habilitarlo.",
+      "declared_network_domains": [
+        "lacartoons.com",
+        "www.lacartoons.com",
+        "ok.ru",
+        "cubeembed.rpmvid.com",
+        "rpmvid.com"
+      ],
+      "network_disclosure_source": "user-provided Kino Android plugin permission disclosure",
+      "excluded_capabilities": [
+        "offline_video_downloads",
+        "diagnostic_telemetry"
+      ],
+      "network_policy": "declared_hosts_only",
+      "declared_capabilities": [
+        "catalog_browsing",
+        "authorized_stream_playback"
+      ]
     },
     {
       "id": "tv-en-vivo",
@@ -74,7 +123,21 @@
       "source_version": "0.1.0",
       "source_license": "UNVERIFIED",
       "adapter_status": "metadata_only",
-      "description": "Plugin de Kino importado del kit YojanderKits; requiere revisar licencia, permisos y adaptar sus interfaces antes de habilitarlo."
+      "description": "Plugin de Kino importado del kit YojanderKits; requiere revisar licencia, permisos y adaptar sus interfaces antes de habilitarlo.",
+      "declared_network_domains": [
+        "www.tvenvivo.org",
+        "regionales.saohgdassregions.com",
+        "deportes.ksdjugfssddeports.com"
+      ],
+      "network_disclosure_source": "user-provided Kino Android plugin permission disclosure",
+      "excluded_capabilities": [
+        "offline_video_downloads",
+        "diagnostic_telemetry"
+      ],
+      "network_policy": "declared_hosts_only",
+      "declared_capabilities": [
+        "live_tv"
+      ]
     },
     {
       "id": "cinehd-plus",
@@ -91,7 +154,49 @@
       "source_version": "0.1.3",
       "source_license": "UNVERIFIED",
       "adapter_status": "metadata_only",
-      "description": "Plugin de Kino importado del kit YojanderKits; requiere revisar licencia, permisos y adaptar sus interfaces antes de habilitarlo."
+      "description": "Plugin de Kino importado del kit YojanderKits; requiere revisar licencia, permisos y adaptar sus interfaces antes de habilitarlo.",
+      "declared_network_domains": [
+        "cinehdplus.org",
+        "www.cinehdplus.org",
+        "api.cinehdplus.org",
+        "fotise.com",
+        "voe.sx",
+        "mixdrop.co",
+        "mixdrop.to",
+        "streamtape.com",
+        "strcloud.link",
+        "stape.fun",
+        "streamadblocker.xyz",
+        "vibuxer.com",
+        "embedwish.com",
+        "hglink.to",
+        "hlswish.com",
+        "streamwish.com",
+        "streamwish.to",
+        "strwish.com",
+        "wishembed.com",
+        "filelions.com",
+        "vidhide.com",
+        "vidhidepro.com",
+        "vidhideplus.com",
+        "vidhidefast.com",
+        "callistanise.com",
+        "dintezuvio.com",
+        "minochinos.com",
+        "filelions.to",
+        "morencius.com",
+        "*.premilkyway.com"
+      ],
+      "network_disclosure_source": "user-provided Kino Android plugin permission disclosure",
+      "excluded_capabilities": [
+        "offline_video_downloads",
+        "diagnostic_telemetry"
+      ],
+      "network_policy": "declared_hosts_only",
+      "declared_capabilities": [
+        "catalog_browsing",
+        "authorized_stream_playback"
+      ]
     },
     {
       "id": "solo-latino",
@@ -108,7 +213,41 @@
       "source_version": "0.1.5",
       "source_license": "UNVERIFIED",
       "adapter_status": "metadata_only",
-      "description": "Plugin de Kino importado del kit YojanderKits; requiere revisar licencia, permisos y adaptar sus interfaces antes de habilitarlo."
+      "description": "Plugin de Kino importado del kit YojanderKits; requiere revisar licencia, permisos y adaptar sus interfaces antes de habilitarlo.",
+      "declared_network_domains": [
+        "sololatino.net",
+        "embed69.org",
+        "voe.sx",
+        "vidhide.com",
+        "vidhidepro.com",
+        "vidhideplus.com",
+        "vidhidefast.com",
+        "callistanise.com",
+        "dintezuvio.com",
+        "minochinos.com",
+        "filelions.to",
+        "morencius.com",
+        "embedwish.com",
+        "hglink.to",
+        "hlswish.com",
+        "streamwish.com",
+        "streamwish.to",
+        "strwish.com",
+        "wishembed.com",
+        "filelions.com",
+        "vibuxer.com",
+        "*.premilkyway.com"
+      ],
+      "network_disclosure_source": "user-provided Kino Android plugin permission disclosure",
+      "excluded_capabilities": [
+        "offline_video_downloads",
+        "diagnostic_telemetry"
+      ],
+      "network_policy": "declared_hosts_only",
+      "declared_capabilities": [
+        "catalog_browsing",
+        "authorized_stream_playback"
+      ]
     },
     {
       "id": "cablevisionhd",
@@ -125,7 +264,22 @@
       "source_version": "0.3.1",
       "source_license": "UNVERIFIED",
       "adapter_status": "metadata_only",
-      "description": "Plugin de Kino importado del kit YojanderKits; requiere revisar licencia, permisos y adaptar sus interfaces antes de habilitarlo."
+      "description": "Plugin de Kino importado del kit YojanderKits; requiere revisar licencia, permisos y adaptar sus interfaces antes de habilitarlo.",
+      "declared_network_domains": [
+        "cablevisionhd.com",
+        "www.cablevisionhd.com",
+        "regionales.saohgdassregions.com",
+        "deportes.ksdjugfssddeports.com"
+      ],
+      "network_disclosure_source": "user-provided Kino Android plugin permission disclosure",
+      "excluded_capabilities": [
+        "offline_video_downloads",
+        "diagnostic_telemetry"
+      ],
+      "network_policy": "declared_hosts_only",
+      "declared_capabilities": [
+        "live_tv"
+      ]
     },
     {
       "id": "embed-69",
@@ -142,7 +296,36 @@
       "source_version": "1.1.0",
       "source_license": "UNVERIFIED",
       "adapter_status": "metadata_only",
-      "description": "Plugin de Kino importado del kit YojanderKits; requiere revisar licencia, permisos y adaptar sus interfaces antes de habilitarlo."
+      "description": "Plugin de Kino importado del kit YojanderKits; requiere revisar licencia, permisos y adaptar sus interfaces antes de habilitarlo.",
+      "declared_network_domains": [
+        "embed69.org",
+        "vidhide.com",
+        "vidhidepro.com",
+        "vidhideplus.com",
+        "dintezuvio.com",
+        "minochinos.com",
+        "filelions.to",
+        "morencius.com",
+        "hlswish.com",
+        "streamwish.com",
+        "streamwish.to",
+        "strwish.com",
+        "wishembed.com",
+        "filelions.com",
+        "hglink.to",
+        "vibuxer.com",
+        "voe.sx"
+      ],
+      "network_disclosure_source": "user-provided Kino Android plugin permission disclosure",
+      "excluded_capabilities": [
+        "offline_video_downloads",
+        "diagnostic_telemetry"
+      ],
+      "network_policy": "declared_hosts_only",
+      "declared_capabilities": [
+        "catalog_browsing",
+        "authorized_stream_playback"
+      ]
     },
     {
       "id": "gnula",
@@ -159,7 +342,12 @@
       "source_version": "1.0.0",
       "source_license": "UNVERIFIED",
       "adapter_status": "metadata_only",
-      "description": "Plugin de Kino importado del kit YojanderKits; requiere revisar licencia, permisos y adaptar sus interfaces antes de habilitarlo."
+      "description": "Plugin de Kino importado del kit YojanderKits; requiere revisar licencia, permisos y adaptar sus interfaces antes de habilitarlo.",
+      "excluded_capabilities": [
+        "offline_video_downloads",
+        "diagnostic_telemetry"
+      ],
+      "network_policy": "declared_hosts_only"
     },
     {
       "id": "addon-latam",
@@ -176,7 +364,20 @@
       "source_version": "1.2.0",
       "source_license": "UNVERIFIED",
       "adapter_status": "metadata_only",
-      "description": "Plugin de Kino importado del kit YojanderKits; requiere revisar licencia, permisos y adaptar sus interfaces antes de habilitarlo."
+      "description": "Plugin de Kino importado del kit YojanderKits; requiere revisar licencia, permisos y adaptar sus interfaces antes de habilitarlo.",
+      "declared_network_domains": [
+        "addonlatam.duckdns.org"
+      ],
+      "network_disclosure_source": "user-provided Kino Android plugin permission disclosure",
+      "excluded_capabilities": [
+        "offline_video_downloads",
+        "diagnostic_telemetry"
+      ],
+      "network_policy": "declared_hosts_only",
+      "declared_capabilities": [
+        "catalog_browsing",
+        "authorized_stream_playback"
+      ]
     },
     {
       "id": "framextv",
@@ -193,7 +394,24 @@
       "source_version": "0.1.0",
       "source_license": "UNVERIFIED",
       "adapter_status": "metadata_only",
-      "description": "Plugin de Kino importado del kit YojanderKits; requiere revisar licencia, permisos y adaptar sus interfaces antes de habilitarlo."
+      "description": "Plugin de Kino importado del kit YojanderKits; requiere revisar licencia, permisos y adaptar sus interfaces antes de habilitarlo.",
+      "declared_network_domains": [
+        "enc-dec.app",
+        "api.wing.st",
+        "api.wecollege.net",
+        "hybrows.workers.dev",
+        "api.themoviedb.org"
+      ],
+      "network_disclosure_source": "user-provided Kino Android plugin permission disclosure",
+      "excluded_capabilities": [
+        "offline_video_downloads",
+        "diagnostic_telemetry"
+      ],
+      "network_policy": "declared_hosts_only",
+      "declared_capabilities": [
+        "catalog_browsing",
+        "authorized_stream_playback"
+      ]
     },
     {
       "id": "yojatv-alpha",
@@ -210,7 +428,94 @@
       "source_version": "6.1.2",
       "source_license": "UNVERIFIED",
       "adapter_status": "metadata_only",
-      "description": "Plugin de Kino importado del kit YojanderKits; requiere revisar licencia, permisos y adaptar sus interfaces antes de habilitarlo."
+      "description": "Plugin de Kino importado del kit YojanderKits; requiere revisar licencia, permisos y adaptar sus interfaces antes de habilitarlo.",
+      "declared_network_domains": [
+        "ver-peliculas-online.net",
+        "jkanime.net",
+        "cdn.jkdesa.com",
+        "cinecalidad.am",
+        "hackstore.fo",
+        "cinehdplus.org",
+        "api.cinehdplus.org",
+        "sololatino.net",
+        "embed69.org",
+        "pelisgratishds",
+        "cdn.pelistop.com",
+        "embed.pelisgratishd.lat",
+        "directyp.org",
+        "cuevana-3.page",
+        "vidplayz.site",
+        "i1.wp.com",
+        "entrepeliculasyseries.nz",
+        "animeav1",
+        "animeflv.net",
+        "tdtchannels.com",
+        "net79.cc",
+        "onlyflix.to",
+        "pelisplushd.la",
+        "1movies.stream",
+        "pluto.tv",
+        "api.themoviedb.org",
+        "image.tmdb.org",
+        "mediafire.com",
+        "mp4upload.com",
+        "voe.sx",
+        "goodstream.one",
+        "vimeos.net",
+        "filemoon.sx",
+        "doodstream.com",
+        "morencius.com",
+        "hglink.to",
+        "fotise.com",
+        "vidhide.com",
+        "vidhidepro.com",
+        "vidhideplus.com",
+        "vidhidefast.com",
+        "unlimplay.com",
+        "nontongo.stream",
+        "mixdrop.co",
+        "streamtape.com",
+        "sfastwish.com",
+        "dsvplay.com",
+        "d-s.io",
+        "mega.nz",
+        "bysekoze.com",
+        "hakunaymatata.com",
+        "kaembed.net",
+        "waaw.to",
+        "vidapi.xyz",
+        "vidfast.vc",
+        "uqload.vc",
+        "playmogo.com",
+        "megankiddifference.com",
+        "chaliceguzzlerlandlord.com",
+        "derricknationtop.com",
+        "opuxa.lat",
+        "cuevana3to.com",
+        "dramiyos-cdn.com",
+        "byselapuix.com",
+        "player.zilla-networks.com",
+        "flixcloud.cc",
+        "mfw09.org",
+        "videasy.net",
+        "videasy.to",
+        "cuevanatv.vip",
+        "acek-cdn.com",
+        "streamwish.to",
+        "animeav1.uns.bio",
+        "callistanise.com",
+        "yojatv-status.onrender.com"
+      ],
+      "network_disclosure_source": "user-provided Kino Android plugin permission disclosure",
+      "excluded_capabilities": [
+        "offline_video_downloads",
+        "diagnostic_telemetry"
+      ],
+      "network_policy": "declared_hosts_only",
+      "declared_capabilities": [
+        "user_supplied_account_credentials",
+        "live_tv"
+      ]
     },
     {
       "id": "cinehax-plus",
@@ -227,7 +532,22 @@
       "source_version": "0.3.3",
       "source_license": "UNVERIFIED",
       "adapter_status": "metadata_only",
-      "description": "Plugin de Kino importado del kit YojanderKits; requiere revisar licencia, permisos y adaptar sus interfaces antes de habilitarlo."
+      "description": "Plugin de Kino importado del kit YojanderKits; requiere revisar licencia, permisos y adaptar sus interfaces antes de habilitarlo.",
+      "declared_network_domains": [
+        "cinehaxplus.com",
+        "api-encrypted.moviemaster.lat",
+        "*.cinehaxplus.com"
+      ],
+      "network_disclosure_source": "user-provided Kino Android plugin permission disclosure",
+      "excluded_capabilities": [
+        "offline_video_downloads",
+        "diagnostic_telemetry"
+      ],
+      "network_policy": "declared_hosts_only",
+      "declared_capabilities": [
+        "catalog_browsing",
+        "authorized_stream_playback"
+      ]
     },
     {
       "id": "nuvio-sports",
@@ -244,7 +564,20 @@
       "source_version": "1.1.0",
       "source_license": "UNVERIFIED",
       "adapter_status": "metadata_only",
-      "description": "Plugin de Kino importado del kit YojanderKits; requiere revisar licencia, permisos y adaptar sus interfaces antes de habilitarlo."
+      "description": "Plugin de Kino importado del kit YojanderKits; requiere revisar licencia, permisos y adaptar sus interfaces antes de habilitarlo.",
+      "declared_network_domains": [
+        "nuviosports.xyz"
+      ],
+      "network_disclosure_source": "user-provided Kino Android plugin permission disclosure",
+      "excluded_capabilities": [
+        "offline_video_downloads",
+        "diagnostic_telemetry"
+      ],
+      "network_policy": "declared_hosts_only",
+      "declared_capabilities": [
+        "catalog_browsing",
+        "authorized_stream_playback"
+      ]
     },
     {
       "id": "cncverse",
@@ -261,7 +594,12 @@
       "source_version": "2.0.0",
       "source_license": "UNVERIFIED",
       "adapter_status": "metadata_only",
-      "description": "Plugin de Kino importado del kit YojanderKits; requiere revisar licencia, permisos y adaptar sus interfaces antes de habilitarlo."
+      "description": "Plugin de Kino importado del kit YojanderKits; requiere revisar licencia, permisos y adaptar sus interfaces antes de habilitarlo.",
+      "excluded_capabilities": [
+        "offline_video_downloads",
+        "diagnostic_telemetry"
+      ],
+      "network_policy": "declared_hosts_only"
     },
     {
       "id": "cuevana-plus",
@@ -278,7 +616,51 @@
       "source_version": "1.2.8",
       "source_license": "UNVERIFIED",
       "adapter_status": "metadata_only",
-      "description": "Plugin de Kino importado del kit YojanderKits; requiere revisar licencia, permisos y adaptar sus interfaces antes de habilitarlo."
+      "description": "Plugin de Kino importado del kit YojanderKits; requiere revisar licencia, permisos y adaptar sus interfaces antes de habilitarlo.",
+      "declared_network_domains": [
+        "cuevana3a.pro",
+        "cuevana3b.pro",
+        "cuevana3c.pro",
+        "cuevana3d.pro",
+        "cuevana3e.pro",
+        "cuevana3f.pro",
+        "cuevana3g.pro",
+        "cuevana3h.pro",
+        "cuevana3i.pro",
+        "cuevana3j.pro",
+        "cuevana3k.pro",
+        "cuevana3l.pro",
+        "cuevana3m.pro",
+        "cuevana3n.pro",
+        "cuevana3o.pro",
+        "cuevana3p.pro",
+        "cuevana3q.pro",
+        "cuevana3r.pro",
+        "cuevana3s.pro",
+        "cuevana3t.pro",
+        "cuevana3u.pro",
+        "cuevana3v.pro",
+        "cuevana3w.pro",
+        "cuevana3x.pro",
+        "cuevana3y.pro",
+        "cuevana3z.pro",
+        "filemoon.sx",
+        "dood.li",
+        "dramiyos-cdn.com",
+        "swcdn.net",
+        "luluvdo.com",
+        "acek-cdn.com"
+      ],
+      "network_disclosure_source": "user-provided Kino Android plugin permission disclosure",
+      "excluded_capabilities": [
+        "offline_video_downloads",
+        "diagnostic_telemetry"
+      ],
+      "network_policy": "declared_hosts_only",
+      "declared_capabilities": [
+        "catalog_browsing",
+        "authorized_stream_playback"
+      ]
     },
     {
       "id": "pelispanda",
@@ -295,7 +677,28 @@
       "source_version": "1.0.0",
       "source_license": "UNVERIFIED",
       "adapter_status": "metadata_only",
-      "description": "Plugin de Kino importado del kit YojanderKits; requiere revisar licencia, permisos y adaptar sus interfaces antes de habilitarlo."
+      "description": "Plugin de Kino importado del kit YojanderKits; requiere revisar licencia, permisos y adaptar sus interfaces antes de habilitarlo.",
+      "declared_network_domains": [
+        "pelispanda.org",
+        "*.pelispanda.org",
+        "vimeos.net",
+        "voe.sx",
+        "doodstream.com",
+        "goodstream.one",
+        "hlswish.com",
+        "filemoon.sx",
+        "videoapp.zip"
+      ],
+      "network_disclosure_source": "user-provided Kino Android plugin permission disclosure",
+      "excluded_capabilities": [
+        "offline_video_downloads",
+        "diagnostic_telemetry"
+      ],
+      "network_policy": "declared_hosts_only",
+      "declared_capabilities": [
+        "catalog_browsing",
+        "authorized_stream_playback"
+      ]
     },
     {
       "id": "youtube-music",
@@ -312,7 +715,24 @@
       "source_version": "0.5.2",
       "source_license": "UNVERIFIED",
       "adapter_status": "metadata_only",
-      "description": "Plugin de Kino importado del kit YojanderKits; requiere revisar licencia, permisos y adaptar sus interfaces antes de habilitarlo."
+      "description": "Plugin de Kino importado del kit YojanderKits; requiere revisar licencia, permisos y adaptar sus interfaces antes de habilitarlo.",
+      "declared_network_domains": [
+        "music.youtube.com",
+        "www.youtube.com",
+        "accounts.google.com",
+        "accounts.youtube.com",
+        "*.googlevideo.com"
+      ],
+      "network_disclosure_source": "user-provided Kino Android plugin permission disclosure",
+      "excluded_capabilities": [
+        "offline_video_downloads",
+        "diagnostic_telemetry"
+      ],
+      "network_policy": "declared_hosts_only",
+      "declared_capabilities": [
+        "catalog_browsing",
+        "authorized_stream_playback"
+      ]
     },
     {
       "id": "latino",
@@ -329,7 +749,53 @@
       "source_version": "2.2.0",
       "source_license": "UNVERIFIED",
       "adapter_status": "metadata_only",
-      "description": "Plugin de Kino importado del kit YojanderKits; requiere revisar licencia, permisos y adaptar sus interfaces antes de habilitarlo."
+      "description": "Plugin de Kino importado del kit YojanderKits; requiere revisar licencia, permisos y adaptar sus interfaces antes de habilitarlo.",
+      "declared_network_domains": [
+        "lamovie.org",
+        "hackstore2",
+        "cinecalidad.vg",
+        "seriesmetro.com",
+        "seriesflix.com",
+        "embed69.org",
+        "homelabx",
+        "zoowomaniacos",
+        "goodstream.one",
+        "vimeos.net",
+        "vimeos.zip",
+        "hlswish.com",
+        "streamwish.com",
+        "strwish.com",
+        "wishembed.com",
+        "filelions.com",
+        "hglink.to",
+        "vibuxer.com",
+        "vidhide.com",
+        "vidhidepro.com",
+        "vidhideplus.com",
+        "vidhidefast.com",
+        "dintezuvio.com",
+        "minochinos.com",
+        "filelions.to",
+        "morencius.com",
+        "fastream.to",
+        "voe.sx",
+        "ok.ru",
+        "archive.org",
+        "nupload.com",
+        "pelisplushd.la",
+        "pelispanda.org",
+        "tioplus.com",
+        "raw.githubusercontent.com"
+      ],
+      "network_disclosure_source": "user-provided Kino Android plugin permission disclosure",
+      "excluded_capabilities": [
+        "offline_video_downloads",
+        "diagnostic_telemetry"
+      ],
+      "network_policy": "declared_hosts_only",
+      "declared_capabilities": [
+        "live_tv"
+      ]
     },
     {
       "id": "premium",
@@ -346,7 +812,12 @@
       "source_version": "2.0.3",
       "source_license": "UNVERIFIED",
       "adapter_status": "metadata_only",
-      "description": "Plugin de Kino importado del kit YojanderKits; requiere revisar licencia, permisos y adaptar sus interfaces antes de habilitarlo."
+      "description": "Plugin de Kino importado del kit YojanderKits; requiere revisar licencia, permisos y adaptar sus interfaces antes de habilitarlo.",
+      "excluded_capabilities": [
+        "offline_video_downloads",
+        "diagnostic_telemetry"
+      ],
+      "network_policy": "declared_hosts_only"
     },
     {
       "id": "xuper",
@@ -370,7 +841,12 @@
         "api.themoviedb.org",
         "raw.githubusercontent.com"
       ],
-      "network_disclosure_source": "user-provided Kino Android plugin permission disclosure"
+      "network_disclosure_source": "user-provided Kino Android plugin permission disclosure",
+      "excluded_capabilities": [
+        "offline_video_downloads",
+        "diagnostic_telemetry"
+      ],
+      "network_policy": "declared_hosts_only"
     },
     {
       "id": "animeav1",
@@ -387,7 +863,12 @@
       "source_version": "1.6.1",
       "source_license": "UNVERIFIED",
       "adapter_status": "metadata_only",
-      "description": "Plugin de Kino importado del kit YojanderKits; requiere revisar licencia, permisos y adaptar sus interfaces antes de habilitarlo."
+      "description": "Plugin de Kino importado del kit YojanderKits; requiere revisar licencia, permisos y adaptar sus interfaces antes de habilitarlo.",
+      "excluded_capabilities": [
+        "offline_video_downloads",
+        "diagnostic_telemetry"
+      ],
+      "network_policy": "declared_hosts_only"
     },
     {
       "id": "psxtv",
@@ -404,7 +885,19 @@
       "source_version": "0.2.1",
       "source_license": "UNVERIFIED",
       "adapter_status": "metadata_only",
-      "description": "Plugin de Kino importado del kit YojanderKits; requiere revisar licencia, permisos y adaptar sus interfaces antes de habilitarlo."
+      "description": "Plugin de Kino importado del kit YojanderKits; requiere revisar licencia, permisos y adaptar sus interfaces antes de habilitarlo.",
+      "declared_network_domains": [
+        "m3u.cl"
+      ],
+      "network_disclosure_source": "user-provided Kino Android plugin permission disclosure",
+      "excluded_capabilities": [
+        "offline_video_downloads",
+        "diagnostic_telemetry"
+      ],
+      "network_policy": "declared_hosts_only",
+      "declared_capabilities": [
+        "user_configured_m3u_server"
+      ]
     },
     {
       "id": "lacartoons",
@@ -421,7 +914,26 @@
       "source_version": "1.1.0",
       "source_license": "UNVERIFIED",
       "adapter_status": "metadata_only",
-      "description": "Plugin de Kino importado del kit YojanderKits; requiere revisar licencia, permisos y adaptar sus interfaces antes de habilitarlo."
+      "description": "Plugin de Kino importado del kit YojanderKits; requiere revisar licencia, permisos y adaptar sus interfaces antes de habilitarlo.",
+      "declared_network_domains": [
+        "lacartoons.com",
+        "ok.ru",
+        "okcdn.ru",
+        "mycdn.me",
+        "dhtpre.com",
+        "tiktokcdn.com",
+        "rpmvid.com"
+      ],
+      "network_disclosure_source": "user-provided Kino Android plugin permission disclosure",
+      "excluded_capabilities": [
+        "offline_video_downloads",
+        "diagnostic_telemetry"
+      ],
+      "network_policy": "declared_hosts_only",
+      "declared_capabilities": [
+        "catalog_browsing",
+        "authorized_stream_playback"
+      ]
     },
     {
       "id": "tv-latam",
@@ -438,7 +950,12 @@
       "source_version": "0.1.0",
       "source_license": "UNVERIFIED",
       "adapter_status": "metadata_only",
-      "description": "Plugin de Kino importado del kit YojanderKits; requiere revisar licencia, permisos y adaptar sus interfaces antes de habilitarlo."
+      "description": "Plugin de Kino importado del kit YojanderKits; requiere revisar licencia, permisos y adaptar sus interfaces antes de habilitarlo.",
+      "excluded_capabilities": [
+        "offline_video_downloads",
+        "diagnostic_telemetry"
+      ],
+      "network_policy": "declared_hosts_only"
     },
     {
       "id": "eclipsia",
@@ -455,7 +972,21 @@
       "source_version": "0.2.0",
       "source_license": "UNVERIFIED",
       "adapter_status": "metadata_only",
-      "description": "Plugin de Kino importado del kit YojanderKits; requiere revisar licencia, permisos y adaptar sus interfaces antes de habilitarlo."
+      "description": "Plugin de Kino importado del kit YojanderKits; requiere revisar licencia, permisos y adaptar sus interfaces antes de habilitarlo.",
+      "declared_network_domains": [
+        "api.themoviedb.org",
+        "vidlink.pro",
+        "enc-dec.app"
+      ],
+      "network_disclosure_source": "user-provided Kino Android plugin permission disclosure",
+      "excluded_capabilities": [
+        "offline_video_downloads",
+        "diagnostic_telemetry"
+      ],
+      "network_policy": "declared_hosts_only",
+      "declared_capabilities": [
+        "user_supplied_account_credentials"
+      ]
     },
     {
       "id": "pelisyseries",
@@ -472,7 +1003,31 @@
       "source_version": "0.6.5",
       "source_license": "UNVERIFIED",
       "adapter_status": "metadata_only",
-      "description": "Plugin de Kino importado del kit YojanderKits; requiere revisar licencia, permisos y adaptar sus interfaces antes de habilitarlo."
+      "description": "Plugin de Kino importado del kit YojanderKits; requiere revisar licencia, permisos y adaptar sus interfaces antes de habilitarlo.",
+      "declared_network_domains": [
+        "serieskao.top",
+        "morencius.com",
+        "sololatino.net",
+        "hglink.to",
+        "hlswish.com",
+        "voe.sx",
+        "allcalidad.re",
+        "vimeos.net",
+        "goodstream.one",
+        "videoapp.zip",
+        "filemoon.sx",
+        "embed69.org"
+      ],
+      "network_disclosure_source": "user-provided Kino Android plugin permission disclosure",
+      "excluded_capabilities": [
+        "offline_video_downloads",
+        "diagnostic_telemetry"
+      ],
+      "network_policy": "declared_hosts_only",
+      "declared_capabilities": [
+        "catalog_browsing",
+        "authorized_stream_playback"
+      ]
     },
     {
       "id": "fuegocine",
@@ -489,7 +1044,26 @@
       "source_version": "1.0.5",
       "source_license": "UNVERIFIED",
       "adapter_status": "metadata_only",
-      "description": "Plugin de Kino importado del kit YojanderKits; requiere revisar licencia, permisos y adaptar sus interfaces antes de habilitarlo."
+      "description": "Plugin de Kino importado del kit YojanderKits; requiere revisar licencia, permisos y adaptar sus interfaces antes de habilitarlo.",
+      "declared_network_domains": [
+        "www.fuegocine.com",
+        "ok.ru",
+        "avcaption.com",
+        "playmate.to",
+        "frv2.plauymito.live",
+        "vimeos.unlimplay.com",
+        "drive.usercontent.google.com"
+      ],
+      "network_disclosure_source": "user-provided Kino Android plugin permission disclosure",
+      "excluded_capabilities": [
+        "offline_video_downloads",
+        "diagnostic_telemetry"
+      ],
+      "network_policy": "declared_hosts_only",
+      "declared_capabilities": [
+        "catalog_browsing",
+        "authorized_stream_playback"
+      ]
     }
   ]
 }
