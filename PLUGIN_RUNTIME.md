@@ -102,3 +102,5 @@ Se añadió una conexión nativa de DexterH4ck en **Mis fuentes** para servicios
 
 **Alcance:** este conector no ejecuta plugins Android/Kino ni extrae enlaces ocultos de páginas, no reutiliza sesiones de Kino y no desbloquea DRM, cuentas compartidas o geobloqueos. Los demás plugins del kit continúan deshabilitados hasta que exista una integración autorizada y un adaptador probado para cada proveedor. La conexión requiere un servicio Xtream o lista M3U del usuario y no trae canales precargados.
 
+- El cliente Roku también ofrece conexión Xtream (servidor, usuario y contraseña mediante teclado estándar de Roku) y lista M3U; consulta el mismo endpoint y muestra canales, películas, series y episodios en su lista nativa. La reproducción usa el nodo `Video` de SceneGraph.
+- El servidor aplica un timeout de 8 segundos a las consultas remotas para ajustarse a la ejecución serverless.
