@@ -18,8 +18,13 @@ Activar Email OTP en Supabase Auth y añadir la URL de producción de Vercel en 
 ## Publicar contenido
 Crear filas en `tv_dexter.catalog_items` con `published=true`, categoría existente y una URL propia o autorizada en `stream_url`. El reproductor web soporta MP4 y HLS cuando el navegador lo admite de forma nativa. No se incluyen listas IPTV, canales de pago ni enlaces de terceros sin autorización.
 
+## Fuentes personales y reproducción
+- La pantalla **Mis fuentes** permite conectar un servidor Xtream del usuario o una lista M3U propia/autorizada. Carga canales y películas y los reproduce con el reproductor web HLS/DASH/MP4 compatible.
+- Las credenciales Xtream se usan solo en memoria durante la sesión de la pantalla; no se guardan en Supabase ni en el navegador. El proveedor Xtream puede incluir credenciales en la URL estándar del stream durante la reproducción.
+- No hay descargas de video ni recopilación de diagnósticos. Las listas/servidores deben ser del usuario y contar con derechos de acceso/reproducción.
+
 ## Plugins multiplataforma (Kino / Xuper)
-El contrato de plugins del launcher Kino se ha portado a `public/plugins.json`. Web y Roku comparten los mismos IDs y fuentes (`source_name`); cada plataforma usa su reproductor nativo: hls.js + dash.js + HTML5 Video en web y el nodo `Video` de Roku. Los plugins empiezan deshabilitados hasta configurar un feed o stream autorizado. Consulta `PLUGIN_RUNTIME.md` para el contrato y los pasos de activación.
+El contrato de plugins del launcher Kino se ha portado a `public/plugins.json`. Web y Roku comparten los mismos IDs y fuentes (`source_name`); cada plataforma usa su reproductor nativo: hls.js + dash.js + HTML5 Video en web y el nodo `Video` de Roku. Los plugins importados empiezan deshabilitados hasta configurar una integración autorizada y probada. El conector independiente Mi Xtream y M3U ya permite conectar fuentes propias desde la pantalla Mis fuentes. Consulta `PLUGIN_RUNTIME.md` para límites y detalles.
 
 ## Roku
 El cliente Roku consume `/plugins.json` y `/api/catalog`, presenta los proveedores y reproduce HLS/DASH/MP4 mediante SceneGraph/BrightScript y el nodo `Video`. Empaquetar `roku/` en ZIP e instalar mediante Developer Installer en un Roku con modo desarrollador. Para distribución pública se requiere cuenta Roku Developer y revisión del canal.
