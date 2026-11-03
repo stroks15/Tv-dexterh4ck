@@ -360,10 +360,17 @@
       ],
       "requires_authorized_stream": true,
       "source_repository": "https://github.com/xuper-plugin/kino-plugin-xuper",
-      "source_version": "2.2.29",
+      "source_version": "2.3.3",
       "source_license": "Apache-2.0",
       "adapter_status": "source_reviewed_adapter_pending",
-      "description": "Plugin Xuper de Kino. Código público upstream bajo Apache-2.0; requiere adaptar catálogo, sesiones y resolución de reproducción a un servicio seguro para web/Roku."
+      "description": "Plugin Xuper de Kino. Código público upstream bajo Apache-2.0; requiere adaptar catálogo, sesiones y resolución de reproducción a un servicio seguro para web/Roku.",
+      "declared_network_domains": [
+        "oogoy.f30c96w8.com",
+        "osuhk.m3x8050te.com",
+        "api.themoviedb.org",
+        "raw.githubusercontent.com"
+      ],
+      "network_disclosure_source": "user-provided Kino Android plugin permission disclosure"
     },
     {
       "id": "animeav1",
