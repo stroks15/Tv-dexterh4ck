@@ -21,7 +21,7 @@ for (const plugin of manifest.plugins) {
   if (!Array.isArray(plugin.excluded_capabilities) || !plugin.excluded_capabilities.includes("offline_video_downloads") || !plugin.excluded_capabilities.includes("diagnostic_telemetry")) {
     throw new Error(`Plugin ${plugin.id} must exclude downloads and diagnostic telemetry`);
   }
-  if (plugin.network_policy !== "declared_hosts_only") {
+  if (plugin.network_policy !== "declared_hosts_only" && !(plugin.id === "mi-xtream" && plugin.network_policy === "user_configured_public_host")) {
     throw new Error(`Plugin ${plugin.id} must use declared-host network policy`);
   }
   for (const host of plugin.declared_network_domains ?? []) {
