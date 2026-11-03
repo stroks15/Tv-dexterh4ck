@@ -78,3 +78,14 @@ La sesión dura 20 minutos; la cookie es HttpOnly, SameSite=Strict y Secure en p
 ## Validación
 
 npm run lint, npm run validate:plugins, npm run build y npm run build:roku deben pasar antes de integrar cambios. La compilación Roku valida el empaquetado, no el comportamiento de un Roku físico.
+
+## Declaraciones de red del kit Android (actualización)
+
+Se incorporaron al manifiesto `public/plugins.json` los hosts que el usuario declaró explícitamente para los plugins cuya lista pudo identificarse. Cada registro conserva los hosts como **metadatos declarativos**, no como prueba de titularidad, autorización de retransmisión ni permiso para ejecutar código remoto. Los nombres de host ambiguos o transcritos de forma incompleta se omitieron en lugar de adivinarlos.
+
+La política declarada es `declared_hosts_only`: cualquier adaptador futuro debe restringir sus solicitudes a los hosts exactos documentados y no habilitar navegación oculta, servidores HTTPS arbitrarios, saltos de autenticación, DRM o geobloqueos. Las capacidades se limitan a consulta de catálogo, búsqueda, canales en vivo, autenticación del propio usuario y reproducción de streams autorizados, según cada plugin.
+
+Por decisión del usuario, se excluyeron expresamente `offline_video_downloads` y `diagnostic_telemetry` de todos los registros. No se implementarán descargas locales ni recopilación/envío de diagnósticos a Kino.
+
+**Estado:** los metadatos de red quedaron agregados; los plugins continúan deshabilitados hasta completar revisión de código/licencia, autorización de la fuente y adaptadores funcionales probados. Añadir hosts no equivale a habilitar el plugin ni a confirmar que su contenido esté disponible.
+
