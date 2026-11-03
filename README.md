@@ -26,3 +26,6 @@ El cliente Roku consume `/plugins.json` y `/api/catalog`, presenta los proveedor
 
 ## Desarrollo
 `npm ci && npm run dev` · `npm run lint` · `npm run build`.
+
+
+La interfaz Smart TV y el contrato de adaptadores están documentados en PLUGIN_RUNTIME.md. Configura TV_ADULT_PIN_HASH y TV_ADULT_SESSION_SECRET para habilitar el PIN parental; sin esas variables el área adulta permanece cerrada.
