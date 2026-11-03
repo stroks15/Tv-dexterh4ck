@@ -18,5 +18,16 @@ for (const plugin of manifest.plugins) {
   if (plugin.enabled && !["direct_hls_dash", "api_or_direct_hls_dash"].includes(plugin.kind)) {
     throw new Error(`Plugin ${plugin.id} needs a provider-specific API adapter before activation`);
   }
+  if (!Array.isArray(plugin.excluded_capabilities) || !plugin.excluded_capabilities.includes("offline_video_downloads") || !plugin.excluded_capabilities.includes("diagnostic_telemetry")) {
+    throw new Error(`Plugin ${plugin.id} must exclude downloads and diagnostic telemetry`);
+  }
+  if (plugin.network_policy !== "declared_hosts_only") {
+    throw new Error(`Plugin ${plugin.id} must use declared-host network policy`);
+  }
+  for (const host of plugin.declared_network_domains ?? []) {
+    if (!/^(?:\\*\\.)?(?=.{1,253}$)[a-z0-9](?:[a-z0-9-]*[a-z0-9])?(?:\\.[a-z0-9](?:[a-z0-9-]*[a-z0-9])?)+$/i.test(host)) {
+      throw new Error(`Invalid declared network host in ${plugin.id}: ${host}`);
+    }
+  }
 }
 console.log(`Validated ${manifest.plugins.length} plugin definitions (${[...ids].join(", ")})`);
