@@ -25,7 +25,7 @@ for (const plugin of manifest.plugins) {
     throw new Error(`Plugin ${plugin.id} must use declared-host network policy`);
   }
   for (const host of plugin.declared_network_domains ?? []) {
-    if (!/^(?:\\*\\.)?(?=.{1,253}$)[a-z0-9](?:[a-z0-9-]*[a-z0-9])?(?:\\.[a-z0-9](?:[a-z0-9-]*[a-z0-9])?)+$/i.test(host)) {
+    if (!/^(?:\*\.)?(?=.{1,253}$)[a-z0-9](?:[a-z0-9-]*[a-z0-9])?(?:\.[a-z0-9](?:[a-z0-9-]*[a-z0-9])?)+$/i.test(host)) {
       throw new Error(`Invalid declared network host in ${plugin.id}: ${host}`);
     }
   }
