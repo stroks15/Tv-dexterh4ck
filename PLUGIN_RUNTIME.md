@@ -89,3 +89,16 @@ Por decisión del usuario, se excluyeron expresamente `offline_video_downloads` 
 
 **Estado:** los metadatos de red quedaron agregados; los plugins continúan deshabilitados hasta completar revisión de código/licencia, autorización de la fuente y adaptadores funcionales probados. Añadir hosts no equivale a habilitar el plugin ni a confirmar que su contenido esté disponible.
 
+## Fuentes personales reproducibles (implementación)
+
+Se añadió una conexión nativa de DexterH4ck en **Mis fuentes** para servicios Xtream propios/suscritos y listas M3U que el usuario tenga derecho a reproducir.
+
+- Xtream: consulta categorías, canales en vivo y películas mediante la API estándar del servidor; construye las URLs de reproducción del propio proveedor.
+- M3U: lee una lista remota, interpreta `#EXTINF`, nombres, logos y grupos; normaliza enlaces HLS, DASH, MP4 y MPEG-TS.
+- El reproductor web admite HLS (hls.js), DASH (dash.js) y reproducción nativa compatible.
+- Los datos de acceso permanecen en el estado temporal del formulario; no se guardan en Supabase ni en localStorage. La URL de reproducción del proveedor puede contener el usuario/clave y queda visible al navegador durante la reproducción, como requiere el formato Xtream estándar.
+- No se descargan archivos de video ni se envían diagnósticos. Las respuestas de conexión usan `Cache-Control: no-store`.
+- La conexión valida HTTP(S), resuelve el host y rechaza destinos locales/privados, limita tamaño/tiempo y no sigue redirecciones. Los streams M3U con hosts no públicos se descartan.
+
+**Alcance:** este conector no ejecuta plugins Android/Kino ni extrae enlaces ocultos de páginas, no reutiliza sesiones de Kino y no desbloquea DRM, cuentas compartidas o geobloqueos. Los demás plugins del kit continúan deshabilitados hasta que exista una integración autorizada y un adaptador probado para cada proveedor. La conexión requiere un servicio Xtream o lista M3U del usuario y no trae canales precargados.
+
