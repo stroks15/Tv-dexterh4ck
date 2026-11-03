@@ -19,7 +19,7 @@ Activar Email OTP en Supabase Auth y añadir la URL de producción de Vercel en 
 Crear filas en `tv_dexter.catalog_items` con `published=true`, categoría existente y una URL propia o autorizada en `stream_url`. El reproductor web soporta MP4 y HLS cuando el navegador lo admite de forma nativa. No se incluyen listas IPTV, canales de pago ni enlaces de terceros sin autorización.
 
 ## Fuentes personales y reproducción
-- La pantalla **Mis fuentes** permite conectar un servidor Xtream del usuario o una lista M3U propia/autorizada. Carga canales y películas y los reproduce con el reproductor web HLS/DASH/MP4 compatible.
+- La pantalla **Mis fuentes** permite conectar un servidor Xtream del usuario o una lista M3U propia/autorizada. Carga canales, películas, series y episodios; la web usa HLS/DASH/MP4 y Roku el nodo Video nativo de SceneGraph.
 - Las credenciales Xtream se usan solo en memoria durante la sesión de la pantalla; no se guardan en Supabase ni en el navegador. El proveedor Xtream puede incluir credenciales en la URL estándar del stream durante la reproducción.
 - No hay descargas de video ni recopilación de diagnósticos. Las listas/servidores deben ser del usuario y contar con derechos de acceso/reproducción.
 
