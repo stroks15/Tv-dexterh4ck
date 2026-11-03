@@ -122,7 +122,7 @@ sub startXtreamSetup()
  m.xtreamUser = ""
  m.xtreamPassword = ""
  m.sourceFlow = "xtream_server"
- showSourceKeyboard("Servidor Xtream", "Escribe la URL base de tu proveedor, por ejemplo https://servidor:8080", "alphanumeric")
+ showSourceKeyboard("Servidor Xtream", "Escribe la URL base de tu proveedor, por ejemplo https://servidor:8080", "generic")
 end sub
 
 sub startM3uSetup()
