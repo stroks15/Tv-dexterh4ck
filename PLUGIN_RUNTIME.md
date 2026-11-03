@@ -50,3 +50,31 @@ La primera adaptación real debe centrarse en un adaptador Xuper aislado y audit
 - compatibilidad de reproducción probada por separado en navegador y Roku.
 
 No se debe portar el runtime completo de Kino ni su SDK propietario dentro de la app. Se porta el comportamiento que cada plataforma puede implementar de forma nativa.
+
+## Interfaz Smart TV (seis vistas)
+
+La aplicación ahora arranca en TV en Vivo, recupera el último canal guardado en el navegador y, si no existe, elige el primer canal del catálogo. La guía ordena primero los canales mexicanos por el orden solicitado y después el resto alfabéticamente. La navegación admite flechas, Enter, Escape y Backspace; la selección se mantiene visible y las tarjetas tienen foco visible.
+
+Las vistas son: TV en Vivo, Plataformas, Categorías, Kids & Shorts, Anime y Adultos con PIN. Los carruseles y resultados se alimentan exclusivamente de tv_dexter_catalog; las etiquetas de colecciones son filtros sobre los títulos existentes, no generan contenido de relleno. Favoritos y progreso continúan usando los endpoints/RPCs existentes.
+
+## Contrato de adaptador de plugins
+
+Un plugin es reproducible únicamente cuando su adaptador puede devolver metadatos de catálogo y una URL multimedia autorizada. El endpoint GET /api/plugins/:id/catalog?q=... consulta el RPC tv_dexter_catalog, filtra por metadata.plugin_source o source_name y solo responde con resultados de esa fuente cuando el plugin está habilitado en public/plugins.json. El reproductor web admite HLS (hls.js), MP4 y reproducción nativa del navegador; las URLs deben ser HTTP(S), CORS/códecs deben ser compatibles y el proveedor debe permitir su reproducción.
+
+Los 28 registros importados desde YojanderKits siguen deshabilitados mientras no exista un adaptador probado y una fuente cuyo uso/retransmisión esté autorizado. El registro de metadatos no equivale a un plugin funcional. Para habilitar uno hay que implementar su adaptador backend, normalizar resultados a catalog_items/RPC, probar búsqueda, paginación, detalles y resolución, validar URL/códecs y documentar licencia/derechos. No se deben usar endpoints privados, credenciales compartidas publicadas, pools de sesiones, huellas de emulador, tokens sellados ni mecanismos de evasión de geobloqueo/DRM.
+
+### Xuper
+
+Se inspeccionó el repositorio público xuper-plugin/kino-plugin-xuper (Apache-2.0; kit fija 2.2.29 y upstream consultado declara 2.3.3). Su código depende del entorno/SDK de Kino y de un portal de terceros, sesiones de dispositivo, firmas de peticiones y hosts/CDN. El código fuente por sí solo no otorga derechos sobre los streams ni convierte el SDK Kino en un runtime web/Roku. No se copiaron secretos ni se reutilizaron cuentas compartidas o mecanismos de rescate de sesión. Por eso Xuper permanece desactivado hasta disponer de una integración del proveedor con credenciales propias y autorización verificable. Roku requiere además validar compatibilidad real del formato en el dispositivo; compilar el ZIP no prueba reproducción en hardware.
+
+## Control parental
+
+El PIN se valida exclusivamente en servidor en POST /api/adult/verify. Configurar:
+- TV_ADULT_PIN_HASH: SHA-256 hexadecimal del PIN numérico (4–8 dígitos).
+- TV_ADULT_SESSION_SECRET: secreto aleatorio de al menos 32 bytes para firmar la cookie.
+
+La sesión dura 20 minutos; la cookie es HttpOnly, SameSite=Strict y Secure en producción. No se incluye PIN por defecto. Si las variables no existen, el acceso queda cerrado. La vista de adultos abre sitios externos oficiales en otra pestaña; no captura contraseñas/cookies ni automatiza sesiones. Los servicios no ofrecen una API pública común que permita consolidar sus historiales privados; el historial unificado solo puede contener reproducciones de DexterH4ck o integraciones oficialmente autorizadas.
+
+## Validación
+
+npm run lint, npm run validate:plugins, npm run build y npm run build:roku deben pasar antes de integrar cambios. La compilación Roku valida el empaquetado, no el comportamiento de un Roku físico.
